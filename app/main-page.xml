@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Alankar Generator" />
+    
+    <StackLayout class="p-4 space-y-4">
+        <Label text="Current Pattern:" class="text-lg font-bold" />
+        <Label text="{{ currentPattern }}" class="text-xl text-center text-blue-600" textWrap="true" />
+        
+        <Label text="Generated Alankar:" class="text-lg font-bold mt-4" />
+        <Label text="{{ generatedAlankar }}" class="text-xl text-center text-green-600" textWrap="true" />
+        
+        <Button text="Play Pattern" tap="{{ onPlayPattern }}" isEnabled="{{ !isPlaying }}"
+                class="bg-purple-500 text-white font-bold py-2 rounded-lg" />
+        
+        <Button text="Generate New" tap="{{ onGenerateNew }}" 
+                class="bg-blue-500 text-white font-bold py-2 rounded-lg" />
+        
+        <Button text="Next Pattern" tap="{{ onNextPattern }}" 
+                class="bg-green-500 text-white font-bold py-2 rounded-lg" />
+    </StackLayout>
+</Page>
